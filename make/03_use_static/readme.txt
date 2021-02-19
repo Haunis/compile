@@ -1,0 +1,1 @@
+math/libpower.a要预先编译好才行

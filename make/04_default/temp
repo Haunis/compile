@@ -1,0 +1,19 @@
+#就算伪目标也执行...
+.PHONY : all 
+all:main.o add.o
+	g++ -o main main.o add.o
+
+#这两行可以都不要,make可以自行推导
+#要写main.o:mai.cpp(main.cpp可以不写) ,就必须指定编译方式如:g++ -c main.cpp
+main.o:main.cpp
+#	g++ -c main.cpp
+
+#add.o:add.cpp add.h
+#	g++ -c add.cpp 
+	
+add.o:add.h
+
+clean:
+	-rm *.o main 
+	tree
+.PHONY : clean
