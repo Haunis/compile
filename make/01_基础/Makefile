@@ -4,6 +4,7 @@
 edit:main.o
 #	cc -o main main.o
 	g++ -o main main.o
+	@echo "........"
 
 main.o:main.cpp
 #	cc -c main.cpp

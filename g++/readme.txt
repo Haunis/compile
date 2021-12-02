@@ -41,12 +41,7 @@ g++常用参数:
 输出带源代码的汇编文件：
 	https://www.cnblogs.com/fengkang1008/p/4652193.html
 	1.生成.o文件和.s文件
-		g++ -g -c hello.cpp		//生成.o文件
-		g++ -S hello.cp			//生成.s文件
+		g++ -g -c hello.cpp
+		g++ -S hello.cp
 	2.生成含有调试信息，cpp源码的汇编代码
 		objdump -S hello.o > dump.s
-
-g++ -S -o hello.s hello.cpp		//编译，生成.s文件
-g++ -c -o hello.o hello.cpp		//汇编，生成.o文件
-g++ -o a.out hello.cpp 			//链接，生成可执行文件
-objdump -d a.out				//反汇编
