@@ -12,3 +12,11 @@ else
 fi
 
 
+s=90
+if [[ $s < 60 ]]; then
+	echo "<60"        
+elif [[ $s < 80 ]]; then
+	echo "<80"        
+else
+	echo ">80"
+fi
