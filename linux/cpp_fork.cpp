@@ -37,13 +37,13 @@ void test1()
 	//调用该方法后,主进程继续向下执行;
 	//主进程得到的ret是子进程的pid,子进程得到的ret是0
 	//子进程复制父进程的资源,但不执行fork之前的代码,只会继续执行fork之后的代码
-	int ret = fork(); 
-	if (ret > 0) //非0--主进程
+	int pid = fork(); 
+	if (pid > 0) //非0--主进程; 拿到子进程pid	
 	{
-		printf("main  getpid=%d, ret=%d\n", getpid(), ret);
+		printf("main  getpid=%d, pid=%d\n", getpid(), pid);
 	} else //0 -- 子进程
 	{
-		printf("zi  getpid=%d, ret=%d\n", getpid(), ret);
+		printf("zi  getpid=%d, pid=%d\n", getpid(), pid);
 	}
 }
 void test2()
