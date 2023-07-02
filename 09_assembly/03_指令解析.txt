@@ -1,0 +1,7 @@
+mov指令：
+	([])表示对地址的操作
+	mov ebp,esp		#esp寄存器中的值被存储在ebp中; 比如esp寄存器的值是100，那么ebp寄存器的值也是100
+    mov eax,dword ptr [ebp+8]  #ebp+8的值被解析为内存地址
+                               #如果ebp寄存器的值是100的话，那么eax寄存器的值就是100+8的地址的值
+                               #dword ptr即double word pointer，从指定内存地址中读出4字节数据
+

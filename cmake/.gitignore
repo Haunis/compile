@@ -1,3 +1,0 @@
-#在所有路径下，忽略build目录，但不忽略build文件
-build/
-.vscode
